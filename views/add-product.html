@@ -5,20 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecommerce</title>
+  <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="/">Shop</a></li>
-        <li><a href="/admin/add-product">Add Product</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">Ecom Site</a>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/admin/add-product">Add Product</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
-  <main>
+  <main class="container py-2">
     <form action="/admin/add-product" method="post">
-      <input type="text" name="title">
-      <button type="submit">Add Product</button>
+      <div class="mb-3">
+        <label for="productName" class="form-label">Product name</label>
+        <input class="form-control" type="text" name="name" id="productName">
+      </div>
+      <button class="btn btn-primary" type="submit">Add Product</button>
     </form>
   </main>
 </body>
