@@ -1,24 +1,21 @@
-const path = require('path')
 const express = require('express')
-const bodyParser = require('body-parser')
+const path = require('path')
 
 const app = express()
-app.use(bodyParser.urlencoded())
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'shop.html'))
-})
+const shopRouter = require('./routes/shop')
+const adminRouter = require('./routes/admin')
 
-app.get('/add-product', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'add-product.html'))
-})
+// Parsing the incoming request bodies
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.post('/add-product', (req, res) => {
-  console.log(req.body)
-  res.redirect('/')
+app.use(shopRouter)
+app.use('/admin', adminRouter)
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'))
 })
 
 const port = process.env.PORT || 3000
-app.listen(port, () => {
-  console.log(`Server is running on port http://localhost:${port}`)
-})
+app.listen(port, () => console.log(`Server is running on port http://localhost:${port}`))
