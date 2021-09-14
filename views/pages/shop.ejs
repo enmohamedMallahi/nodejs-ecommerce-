@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ecommerce</title>
+  <%- include('../partials/head') %>
+</head>
+<body>
+  <header>
+    <%- include('../partials/header') %>
+  </header>
+
+  <main class="container py-2">
+    <h1>Shop</h1>
+    <span>List of products</span>
+    <div>
+      <% products.forEach((product) => { %>
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title"><%= product.name %></h4>
+            <p class="card-text"><%= product.description %></p>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+  </main>
+
+  <footer>
+    <%- include('../partials/footer') %>
+  </footer>
+</body>
+</html>

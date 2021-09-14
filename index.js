@@ -6,7 +6,8 @@ const app = express()
 const shopRouter = require('./routes/shop')
 const adminRouter = require('./routes/admin')
 
-// Parsing the incoming request bodies
+app.set('view engine', 'ejs');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -14,7 +15,7 @@ app.use(shopRouter)
 app.use('/admin', adminRouter)
 
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'))
+  res.status(404).render(path.join('page', '404.ejs'))
 })
 
 const port = process.env.PORT || 3000
