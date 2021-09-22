@@ -1,0 +1,14 @@
+.products-container {
+	display: grid !important;
+	grid-template-columns: repeat(3, 1fr) !important;
+	grid-template-rows: auto !important;
+	grid-gap: 0.5rem;
+}
+
+/* @media screen and (max-width: 500px) {
+	.products-container {
+		display: grid !important;
+		grid-template-columns: repeat(2, 1fr) !important;
+		grid-gap: 1rem;
+	}
+} */

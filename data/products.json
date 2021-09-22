@@ -1,17 +1,1 @@
-[
-  {
-    "id": 1,
-    "name": "react-qrcode-generator",
-    "description": "djzemofj"
-  },
-  {
-    "id": 2,
-    "name": "react-qrcode-generator",
-    "description": "djzemofj"
-  },
-  {
-    "id": 3,
-    "name": "Mohamed",
-    "description": "jojmozek"
-  }
-]
+[{"name":"Book","description":"Book n°1","image":"https://images.pexels.com/photos/2099266/pexels-photo-2099266.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"},{"name":"Logitech BRIO Ultra HD Webcam for Video Conferencing, Recording, and Streaming","description":"Logitech BRIO Ultra HD Webcam for Video Conferencing, Recording, and StreamingLogitech BRIO Ultra HD Webcam for Video Conferencing, Recording, and Streaming","image":"https://m.media-amazon.com/images/I/615PHGxiucL._AC_UL320_.jpg"}]

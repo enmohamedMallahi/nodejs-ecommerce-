@@ -1,0 +1,38 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/">Ecom Site</a>
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link  " href="/">Shop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= path === " /cart" ? "active" : "" %>" href="/cart">Cart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <%= path === "/admin/add-product" ? "active" : "" %>" href="/admin/add-product">Add Product</a>
+      </li>
+    </ul>
+    <div>
+      <button class="btn btn-success mx-1">Sign Up</button>
+      <button class="btn btn-outline-success">Sign In</button>
+    </div>
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand" href="#!">Start Bootstrap</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+        <li class="nav-item">
+          <a class="nav-link <%= path === '/' ? 'active' : '' %>"  href="/">Shop</a>
+        </li>
+        <li class="nav-item"><a class="nav-link <%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product</a></li>
+      </ul>
+      <form class="d-flex">
+        <a href="/cart" class="btn btn-outline-dark" type="submit">
+          <i class="bi-cart-fill me-1"></i>
+          Cart
+          <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+        </a>
+      </form>
+  </div>
+</nav>

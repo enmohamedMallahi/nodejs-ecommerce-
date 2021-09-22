@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/head') %>
+  <link rel="stylesheet" href="/css/shop.css">
+</head>
+<body>
+  <%- include('../../partials/navbar') %>
+
+  <!-- <header>
+  </header> -->
+
+  <main class="container py-2">
+    <h1>Shop</h1>
+    <span>List of products</span>
+    <div class="products-container">
+      <% if(products.length != 0) { %>
+        <% products.forEach((product) => { %>
+          <div class="card" style="width: 18rem;">
+            <img src="<%= product.image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title"><%= product.name %></h4>
+              <p class="card-text"><%= product.description %></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+          <% }); %>
+        <% } else { %>
+          <h5>No products found.</h5>
+        <% } %>
+    </div>
+  </main>
+
+  <footer>
+    <%- include('../../partials/footer') %>
+  </footer>
+</body>
+</html>

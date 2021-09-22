@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+  <%- include('../../partials/head') %>
   <title>Ecommerce</title>
 </head>
 <body>
+  <%- include('../../partials/navbar') %> 
+
   <header>
-    <%- include('../partials/header') %> 
   </header>
 
   <main class="container py-2">
@@ -16,14 +17,18 @@
       </div>
       <div class="mb-3">
         <label for="productDescription" class="form-label">Product description</label>
-        <textarea class="form-control" type="text" name="description" id="productDescription"></textarea>
+        <textarea class="form-control" name="description" id="productDescription"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="productImage" class="form-label">Product image</label>
+        <input class="form-control" type="url" name="image" id="productImage">
       </div>
       <button class="btn btn-primary" type="submit">Add Product</button>
     </form>
   </main>
   
   <footer>
-    <%- include('../partials/footer') %>
+    <%- include('../../partials/footer') %>
   </footer>
 </body>
 </html>
